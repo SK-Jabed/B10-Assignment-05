@@ -1,19 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment 5</title>
-  </head>
-  <body>
-    <header>
+    <title>DOM Quest Build and Manipulate</title>
 
+    <!-- Font: Lexend Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    
+    <!-- Link: Font Awesome CDN -->
+    <script src="https://kit.fontawesome.com/f811dd765f.js" crossorigin="anonymous"></script>
+    
+    <!-- Link: Tailwind CSS & DaisyUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind CSS Configuration -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'primaryColor': '#FFFFFF',
+              'secondaryColor': '#F9F7F3',
+              'primaryTextColor': 'rgb(17, 17, 17)',
+              'secondaryTextColor': 'rgba(17, 17, 17, 0.7)',
+              'tertiaryTextColor': 'rgba(17, 17, 17, 0.4)',
+              'primaryBorderColor': 'rgba(17, 17, 17, 0.1)',
+              'secondaryBorderColor': 'rgba(17, 17, 17, 0.3)',
+              'buttonColor': '#B4F461',
+              'coinButtonColor': 'rgba(17, 17, 17, 0.05)',              
+            },
+            fontFamily: {
+              'Lexend': "Lexend",
+            }
+          }
+        }
+      }
+    </script>
+
+    <!-- Font Style -->
+    <!-- <style>
+      .lexend-font {
+        font-family: "Lexend", sans-serif;
+      }
+    </style> -->
+  </head>
+  <body class="lexend-font">
+    <header class="bg-secondaryColor">
+      <!-- Navbar Section Start Here -->
+      <nav class="container mx-auto px-6 pt-4 pb-12 md:px-10">
+        <div class="navbar-content flex justify-between items-center">
+          <div class="navbar-left">
+            <button class="text-lg font-bold px-8 py-3 bg-buttonColor rounded-lg">Blog</button>
+          </div>
+          <div class="navbar-middle flex items-center gap-2">
+            <div class="logo">
+              <img src="./assets/logo.png" alt="">
+            </div>
+            <div class="name text-lg font-bold">
+              Donate Bangladesh
+            </div>
+          </div>
+          <div class="navbar-right flex justify-center items-center gap-2">
+            <div class="coin">
+              <img src="./assets/coin.png" alt="">
+            </div>
+            <div class="balance text-lg font-semibold">
+              5500 BDT
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- Navbar Section End Here -->
+      
     </header>
     <main>
+    <!-- Donation Section Start Here -->
+    <div class="features-btn flex justify-center items-center gap-4 mt-12 mb-4">
+      <div class="donation-btn">
+        <button class="text-lg font-bold px-8 py-3 bg-buttonColor rounded-lg">Donation</button>
+      </div>
+      <div class="history-btn">
+        <button class="text-lg text-secondaryTextColor font-bold px-8 py-3 rounded-lg border border-solid border-secondaryBorderColor">History</button>
+      </div>
+    </div>
 
+    <div class="container mx-auto px-6 pt-4 pb-12 md:px-10">
+      <div class="card-content flex justify-center items-center">
+        <div class="img w-full md:w-3/6">
+          <img src="./assets/noakhali.png" alt="">
+        </div>
+        <div class="card-body w-full h-full md:w-3/6">
+          <div class="amount-btn">
+            <button class="flex justify-center items-center gap-2 mb-8 px-4 py-2 bg-coinButtonColor rounded-lg text-base text-secondaryTextColor font-semibold">
+              <img src="./assets/coin.png" alt="">
+              0 BDT
+            </button>
+          </div>
+          <div class="card-texts">
+            <h2 class="card-title">Donate for Flood at Noakhali, Bangladesh</h2>
+            <p> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+          </div>
+          <div class="input-field">
+            <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
+          </div>
+          <div class="donate-now-btn">
+            <button class="btn btn-wide w-full text-lg font-bold bg-buttonColor ">Donate Now</button>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <!-- Donation Section End Here -->
     </main>
     <footer>
-      
+
     </footer>
+    <script src="./js/index.js"></script>
   </body>
 </html>
