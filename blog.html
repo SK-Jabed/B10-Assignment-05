@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Important FAQ</title>
+    <!-- Favicon Added -->
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
 
     <!-- Font: Lexend Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -79,14 +81,22 @@
           <input type="radio" name="my-accordion-4"  />
           <div class="collapse-title text-xl font-semibold">What is the Document Object Model (DOM)?</div>
           <div class="collapse-content">
-            <p>The DOM (Document Object Model) is a structured representation of a webpage, turning the HTML content into a tree of nodes that can be accessed and manipulated using JavaScript.</p>
+            <p>DOM stands for Document Object Model. The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of an HTML or XML document as a tree of objects, where each part of the document (like elements, attributes, and text) is an object that can be accessed and modified using languages like JavaScript.</p>
           </div>
         </div>
         <div class="collapse collapse-arrow join-item border-base-300 border">
           <input type="radio" name="my-accordion-4" />
           <div class="collapse-title text-xl font-semibold">How do you select an element from the DOM?</div>
           <div class="collapse-content">
-            <p>You can select an element using JavaScript methods like document.getElementById(), <br> document.querySelector(), or document.querySelectorAll().
+            <p>To select an element from the DOM, I can use methods like: <br> 
+              <ul>
+                <li>1.getElementById()</li>
+                <li>2.getElementsByClassName()</li>
+                <li>3.getElementsByTagName()</li>
+                <li>4.querySelector()</li>
+                <li>5.querySelectorAll()</li>
+              </ul> 
+              These methods allow to target specific elements by their ID, class, tag name or CSS selectors for further manipulation or styling.
             </p>
           </div>
         </div>
@@ -94,14 +104,40 @@
           <input type="radio" name="my-accordion-4" />
           <div class="collapse-title text-xl font-semibold">What is event delegation in the context of the DOM, and why is it useful?</div>
           <div class="collapse-content">
-            <p>Event delegation is a technique where a single event listener is attached to a parent <br> element to handle events triggered by its child elements. It’s efficient and simplifies <br>event management, especially for dynamic or large sets of elements.</p>
+            <p>Event delegation is a technique in the DOM where a single event listener is added to a parent element instead of multiple listeners to individual child elements. This parent element can manage all events that bubble up from its child elements. This approach is useful as it reduces the number of event listeners, improves performance and makes it easier to manage dynamic content.</p>
           </div>
         </div>
         <div class="collapse collapse-arrow join-item border-base-300 border">
           <input type="radio" name="my-accordion-4" />
           <div class="collapse-title text-xl font-semibold">How do you manipulate an element's attributes and styles using the DOM?</div>
           <div class="collapse-content">
-            <p>Use setAttribute() and getAttribute() to modify attributes. To change styles, <br> you can directly modify the style property or add/remove CSS classes using classList..</p>
+            <p>There are many ways to manipulate an element's attributes and styles using the DOM:</p>
+            <br>
+            <p class="font-semibold">Manipulating Attributes:</p>            
+            <ul>
+              <li>
+                1. element.setAttribute("attribute", "value"): Adds or changes the
+                specified attribute.
+              </li>
+              <li>
+                2. element.getAttribute("attribute"): Retrieves the value of the
+                specified attribute.
+              </li>
+              <li>
+                3. element.removeAttribute("attribute"): Removes the specified
+                attribute.
+              </li>
+            </ul>
+            <br>
+            <p class="font-semibold">Manipulating Styles:</p>
+            <ul>
+              <li>1. element.classList.add("class-name"): Adds a class.</li>
+              <li>2. element.classList.remove("class-name"): Removes a class.</li>
+              <li>
+                3. element.classList.toggle("class-name"): Toggles a class on and
+                off
+              </li>
+            </ul>
           </div>
         </div>
       </div>
