@@ -1,37 +1,38 @@
-function showSectionById(id) {
-    document.getElementById("show-donation-section").classList.add("hidden");
-    document.getElementById("show-donation-history").classList.add("hidden");
+// Features Button
+const historyBtn = document.getElementById("history-button");
+const donationBtn = document.getElementById("donation-button");
 
-    document.getElementById(id).classList.remove("hidden");
-}
-
-
-function showButtonBackground(id) {
-    document.getElementById("donation-button").classList.remove("bg-buttonColor");
-    document.getElementById("history-button").classList.remove("bg-buttonColor");
-
-    document.getElementById(id)
-        .classList.add(
-            "bg-buttonColor",
-            
-        );
-}
+// Show Donation & Donation History Section
+const donationSection =  document.getElementById("show-donation-section");
+const historySection = document.getElementById("show-donation-history");
 
 
-document.getElementById("donation-btn")
-    .addEventListener("click", function() {
-        showSectionById("show-donation-section");
-        showButtonBackground("donation-button");
+// Features Button Event Handler Starts Here
+historyBtn.addEventListener("click", function() {
+    donationSection.classList.add("hidden");
+    historySection.classList.remove("hidden");
+
+    historyBtn.classList.add("bg-buttonColor", "text-black");
+    historyBtn.classList.remove("border", "border-solid", "border-secondaryBorderColor","text-secondaryTextColor");
+
+    donationBtn.classList.remove("bg-buttonColor", "text-black")
+    donationBtn.classList.add("border", "border-solid", "border-secondaryBorderColor","text-secondaryTextColor");
 });
 
-document.getElementById("history-btn")
-    .addEventListener("click", function() {
-        showSectionById("show-donation-history");
-        showButtonBackground("history-button");
+donationBtn.addEventListener("click", function() {
+    donationSection.classList.remove("hidden");
+    historySection.classList.add("hidden");
+
+    donationBtn.classList.add("bg-buttonColor", "text-black");
+    donationBtn.classList.remove("border", "border-solid", "border-secondaryBorderColor","text-secondaryTextColor");
+
+    historyBtn.classList.remove("bg-buttonColor","text-black");
+    historyBtn.classList.add("border", "border-solid", "border-secondaryBorderColor","text-secondaryTextColor");
 });
+// Features Button Event Handler Ends Here
 
 
-// Donation Section JS Start Here 
+// Donation Section JS Starts Here 
 function handleDonation(coinAvailable, coinDonated, donationInput, cause) {
     const donationInputValue = donationInput.value;
     const donationAmount = parseFloat(donationInputValue);
@@ -57,13 +58,12 @@ function handleDonation(coinAvailable, coinDonated, donationInput, cause) {
     donationInput.value = "";
 }
 
-
 document.getElementById("noakhali-donation-btn")
     .addEventListener("click", function() {
         const coinAvailable = document.getElementById("available-amount");
         const coinDonated = document.getElementById("donated-amount-noakhali");
         const noakhaliDonationInput = document.getElementById("input-noakhali-donation");
-        handleDonation(coinAvailable, coinDonated, noakhaliDonationInput,"famine-2024 at Feni, Bangladesh");
+        handleDonation(coinAvailable, coinDonated, noakhaliDonationInput,"Flood at Noakhali, Bangladesh");
 });
 
 document.getElementById("feni-donation-btn")
@@ -71,7 +71,7 @@ document.getElementById("feni-donation-btn")
         const coinAvailable = document.getElementById("available-amount");
         const coinDonated = document.getElementById("donated-amount-feni");
         const feniDonationInput = document.getElementById("input-feni-donation");
-        handleDonation(coinAvailable, coinDonated, feniDonationInput,"Flood Relief in Feni,Bangladesh");
+        handleDonation(coinAvailable, coinDonated, feniDonationInput,"Flood Relief in Feni, Bangladesh");
 });
 
 document.getElementById("quota-donation-btn")
@@ -81,10 +81,10 @@ document.getElementById("quota-donation-btn")
         const quotaDonationInput = document.getElementById("input-qouta-donation");
         handleDonation(coinAvailable, coinDonated, quotaDonationInput,"Aid for Injured in the Quota Movement, Bangladesh");
 });
+// Donation Section JS Ends Here 
 
 
-
-// History Section JS Start Here
+// History Section JS Starts Here
 function addTransactionHistory(amount, cause) {
     const transactionHistory = document.getElementById("show-donation-history");
     const transactionEntry = document.createElement("div");
@@ -97,4 +97,4 @@ function addTransactionHistory(amount, cause) {
     `;
     transactionHistory.appendChild(transactionEntry);
 }
-// History Section JS End Here
+// History Section JS Ends Here
