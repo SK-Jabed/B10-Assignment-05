@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
     
     <!-- Link: Font Awesome CDN -->
-    <script src="https://kit.fontawesome.com/f811dd765f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <!-- Link: Tailwind CSS & DaisyUI CDN -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
@@ -34,45 +34,46 @@
               'coinButtonColor': 'rgba(17, 17, 17, 0.05)',              
             },
             fontFamily: {
-              'Lexend': "Lexend",
+              "lexend": ["Lexend"],
             }
           }
         }
       }
     </script>
-
-    <!-- <style>
-        .lexend{
-        font-family: "Lexend", sans-serif;
-        font-optical-sizing: auto;
-        }
-    </style> -->
-
   </head>
-  <body class="lexend">
-    <header class="bg-secondaryColor mb-20">
-      <nav class="md:w-11/12 mx-auto  flex items-center justify-between md:p-6 md:pb-12 p-2 pt-4 pb-10">
-        <button class="btn bg-buttonColor px-8 font-semibold text-xl">
-          <a href="./index.html">Home</a>
-        </button>
-        <div class="flex items-center space-x-2">
-          <img class="" src="assets/logo.png" alt="">
-          <p class="font-medium md:text-xl text-primaryTextColor">Donate Bangladesh</p>
-        </div>
-        <div class="flex items-center space-x-2">
-          <img src="assets/coin.png" alt="">
-          <p class="text-secondaryTextColor text-xl font-semibold">
-            <span>5500</span> BDT
-          </p>
+  <body class="font-lexend">
+    <header class="bg-secondaryColor mb-20 sticky top-0 z-50 backdrop-blur-md">
+      <!-- Navbar Section Start Here -->
+      <nav class="container w-11/12 mx-auto px-6 pt-4 pb-12 md:px-10">
+        <div class="navbar-content flex justify-between items-center">
+          <div class="navbar-left">
+            <button class="text-lg font-bold px-8 py-3 bg-buttonColor rounded-lg">
+              <a href="./index.html">Home</a>
+            </button>
+          </div>
+          <div class="navbar-middle flex items-center space-x-2">
+            <div class="logo">
+              <img src="./assets/logo.png" alt="">
+            </div>
+            <div class="name">
+              <p class="text-lg font-bold hidden md:block">Donate Bangladesh</p>
+            </div>
+          </div>
+          <div class="navbar-right flex justify-center items-center space-x-2">
+            <div class="coin">
+              <img src="./assets/coin.png" alt="">
+            </div>
+            <div class="balance ">
+              <p class="text-lg text-secondaryTextColor font-semibold"><span id="available-amount">5500</span> BDT</p>
+               
+            </div>
+          </div>
         </div>
       </nav>
+      <!-- Navbar Section End Here -->
     </header>
-    <main class="w-10/12 mx-auto">
-      <h1 class="text-3xl font-bold">Important Faq 
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-9 font-black animate-bounce inline-block">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z" />
-        </svg>           
-      </h1>
+    <main class="container w-10/12 mx-auto">
+      <h1 class="text-3xl font-bold">Important Faq <i class="fa-regular fa-circle-question"></i></h1>
       <div class="join join-vertical w-full mt-10">
         <div class="collapse collapse-arrow join-item border-base-300 border">
           <input type="radio" name="my-accordion-4"  />

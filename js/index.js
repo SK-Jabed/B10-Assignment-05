@@ -13,7 +13,7 @@ function showButtonBackground(id) {
     document.getElementById(id)
         .classList.add(
             "bg-buttonColor",
-            "border-none"
+            
         );
 }
 
@@ -60,7 +60,7 @@ function handleDonation(coinAvailable, coinDonated, donationInput, cause){
 function addTransactionHistory(amount, cause) {
     const transactionHistory = document.getElementById('show-donation-history');
     const transactionEntry = document.createElement('div');
-    transactionEntry.classList.add('bg-white', 'p-4', 'rounded-lg', 'mb-4', 'border', 'shadow-md');
+    transactionEntry.classList.add('bg-white', 'p-4', 'rounded-lg', 'mb-4', 'border', 'shadow-md', "container", 'w-10/12', "mx-auto");
     transactionEntry.innerHTML = `
         <p class="font-bold text-lg mb-2">${amount} Taka is Donated for ${cause}</p>
         <p class="text-sm text-gray-600">Date : ${new Date().toString()}</p>

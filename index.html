@@ -3,9 +3,11 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM Quest Build and Manipulate</title>
+    <title>Donate Bangladesh | Assignment-5</title>
+    <!-- Favicon Added -->
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
 
-    <!-- Font: Lexend Font -->
+    <!-- Font: Lexend Font Imported -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
@@ -34,22 +36,15 @@
               'coinButtonColor': 'rgba(17, 17, 17, 0.05)',              
             },
             fontFamily: {
-              'Lexend': "Lexend",
+              "lexend": ["Lexend"],
             }
           }
         }
       }
     </script>
-
-    <!-- Font Style -->
-    <!-- <style>
-      .lexend-font {
-        font-family: "Lexend", sans-serif;
-      }
-    </style> -->
   </head>
-  <body class="lexend-font">
-    <header class="bg-secondaryColor backdrop-blur-lg sticky top-0 z-50">
+  <body class="font-lexend">
+    <header class="bg-secondaryColor sticky top-0 z-50 backdrop-blur-md">
       <!-- Navbar Section Start Here -->
       <nav class="container w-11/12 mx-auto px-6 pt-4 pb-12 md:px-10">
         <div class="navbar-content flex justify-between items-center">
@@ -79,7 +74,7 @@
       </nav>
       <!-- Navbar Section End Here -->
       <!-- Features Section Start Here -->
-      <div class="features-btn bg-primaryColor flex justify-center items-center gap-4 pt-16 pb-6 backdrop-blur-md">
+      <div class="features-btn bg-primaryColor flex justify-center items-center gap-4 pt-16 pb-6">
         <div class="donation-btn">
           <button id="donation-button" class="text-lg font-bold px-8 py-3 bg-buttonColor rounded-lg">
             <a id="donation-btn" href="#">Donation</a>
@@ -100,16 +95,16 @@
       <div class="container w-10/12 mx-auto p-8 md:px-10 border rounded-2xl">
         <div class="card-content grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-10">
           <div class="card-image">
-            <img class="w-full h-full object-cover rounded-xl" src="./assets/noakhali.png" alt="">
+            <img class="w-full h-full  rounded-xl" src="./assets/noakhali.png" alt="">
           </div>
-          <div class="card-text-content">
+          <div class="card-text-content w-full h-full flex flex-1 flex-col">
             <div class="donation-amount w-40 flex items-center gap-2 p-3 rounded-lg bg-coinButtonColor">
               <img src="./assets/coin.png" alt="">
               <p class="text-secondaryTextColor font-bold"><span id="donated-amount-noakhali">5000</span> BDT</p>
             </div>
             <div class="card-texts mt-4">
               <h2 class="card-title text-primaryTextColor text-xl font-bold">Donate for Flood at Noakhali, Bangladesh</h2>
-              <p class="text-secondaryTextColor text-base font-normal mt-4 mb-6"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+              <p class="text-secondaryTextColor text-base font-normal mt-4 mb-8 lg:mb-16"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
             </div>
             <div class="input-field">
               <input id="input-noakhali-donation" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
