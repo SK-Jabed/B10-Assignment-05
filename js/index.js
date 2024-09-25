@@ -34,7 +34,7 @@ document.getElementById("history-btn")
 // Donation Section JS Start Here 
 function handleDonation(coinAvailable, coinDonated, donationInput, cause) {
     const donationInputValue = donationInput.value;
-    const donationAmount = parseInt(donationInputValue);
+    const donationAmount = parseFloat(donationInputValue);
 
     if (donationInputValue === "" || donationAmount <= 0 || isNaN(donationAmount) || isNaN(donationInputValue)) {
         alert("Please enter a valid amount");
@@ -42,8 +42,8 @@ function handleDonation(coinAvailable, coinDonated, donationInput, cause) {
         return;
     }
 
-    const donationTotal = donationAmount + parseInt(coinDonated.innerText);
-    const coinAvailableTotal = parseInt(coinAvailable.innerText) - donationAmount;
+    const donationTotal = ((donationAmount) + parseFloat(coinDonated.innerText)).toFixed(2);
+    const coinAvailableTotal = parseFloat((coinAvailable.innerText) - donationAmount).toFixed(2);
 
     if (coinAvailableTotal >= 0) {
         coinAvailable.innerText = coinAvailableTotal;
@@ -92,7 +92,7 @@ function addTransactionHistory(amount, cause) {
     transactionEntry.classList.add("bg-white", "p-4", "rounded-lg", "mb-4", "border", "shadow-md", "container", "w-10/12", "mx-auto");
 
     transactionEntry.innerHTML = `
-        <p class="font-bold text-lg mb-2">${amount} Taka is Donated for ${cause}</p>
+        <p class="font-bold text-lg mb-2">${amount.toFixed(2)} Taka is Donated for ${cause}</p>
         <p class="text-sm text-gray-600">Date : ${new Date().toString()}</p>
     `;
     transactionHistory.appendChild(transactionEntry);
